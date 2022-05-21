@@ -1,0 +1,94 @@
+<meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+<meta charset="utf-8">
+<META HTTP-EQUIV="CONTENT-LANGUAGE" CONTENT="ru">
+
+<form name="quiz" class="quiz" id="quiz" action="javascript:check();">
+<div class="ozeronazv">
+    <h3>
+        РАБОЧАЯ СИЛА
+    </h3>
+</div>
+<p>На диаграмме показана структура работоспособного населения в
+    некоторой стране. Численность всего населения этой страны в 1995 году была
+    примерно равна 3,4 миллиона.
+    </p>
+<div class="ozero">
+    <img class="ozero_img" src="https://i.imgur.com/Ss4koFO.jpg" alt='ozero'>
+</div>
+<p>
+   <div> Примечания</div>
+1. Численность различных групп населения указана в тысячах.
+2. К работоспособному населению относят людей в возрасте от 15 до 65 лет.
+3. Население, которое не входит в состав рабочей силы, – это те, кто активно не ищет работу и(или) кто не
+может работать.
+</p>
+
+
+
+
+
+
+<h3> Вопрос 1: РАБОЧАЯ СИЛА  </h3>
+<p>На какие две основные группы разделено работоспособное население?</p>
+<input name="vopros1" checked="checked" value="no" id="value1" type="radio"> Имеющие работу и безработные. <br>
+<input name="vopros1" value="no" id="value2" type="radio">Работоспособного возраста и неработоспособного возраста <br>
+<input name="vopros1" value="no" id="value3" type="radio">Люди с полной занятостью и люди с частичной занятостью.  <br>
+<input name="vopros1" value="yes" id="value4" type="radio">Входящие в состав рабочей силы и не входящие в состав рабочей силы.  <br>
+
+<h3> Вопрос 2: ОЗЕРО ЧАД </h3>
+<p>
+    Какова численность работоспособного населения, которое не входило в
+состав рабочей силы?
+
+</p>
+<input name="vopros2" checked="checked" value="no" id="value1" type="radio"> 950.000 <br>
+<input name="vopros2" value="no" id="value2" type="radio"> около 900<br>
+<input name="vopros2" value="yes" id="value3" type="radio"> чуть меньше 1000<br>
+<input name="vopros2" value="no" id="value4" type="radio"> 35,8% <br>
+
+<h3> Вопрос 3: РАБОЧАЯ СИЛА </h3>
+<p>Информация о структуре рабочей силы дана в виде приведенной ранее
+    диаграммы, но ее можно представить другими способами, например, с
+    помощью словесного описания, в виде графика, таблицы или диаграммы
+    другого вида, например, круговой.
+    Представленная ранее диаграмма выбрана потому, что она наиболее
+    удобна для того, чтобы показать:
+    </p>
+<input name="vopros3" checked="checked" value="no" id="value1" type="radio"> изменения во времени. <br>
+<input name="vopros3" value="yes" id="value2" type="radio"> численность всего населения страны.  <br>
+<input name="vopros3" value="no" id="value3" type="radio"> категории населения, входящих в состав каждой из выделенных групп <br>
+<input name="vopros3" value="no" id="value4" type="radio"> численность каждой группы населения.  <br>
+<br>
+
+<br>
+<input value="Отправить ответы" type="submit">
+</form>
+<script>
+ function check()
+ {
+ var yes=0;
+ var no=0;
+ var otvet="";
+ var choice;
+ for (var v=1; v<=3; v++)
+ {
+ var q = document.forms['quiz'].elements['vopros'+v];
+  for (var i=0; i<q.length; i++)
+  {
+  if (q[i].checked) {
+  choice=q[i].value;
+  }
+  }
+  if (choice=="yes") {yes++;}
+  if (choice=="no") {no++;}
+ }
+ switch (true) {
+ case (yes==0): otvet="Ваша оценка: 2";break;
+ case (yes==1): otvet="Ваша оценка: 3";break;
+ case (yes==2): otvet="Ваша оценка: 4";break;
+ case (yes==3): otvet="Ваша оценка: 5";break;
+ default: otvet="очень плохо";break;
+ }
+ alert(otvet);
+ }
+</script>

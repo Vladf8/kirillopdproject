@@ -1,0 +1,115 @@
+<meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+<meta charset="utf-8">
+<META HTTP-EQUIV="CONTENT-LANGUAGE" CONTENT="ru">
+
+<form name="quiz" class="quiz" id="quiz" action="javascript:check();">
+<div class="ozeronazv">
+    <h3>
+        ОЗЕРО ЧАД
+    </h3>
+</div>
+<p>На рисунке 1 показано изменение уровня глубины озера Чад в североафриканской
+    части пустыни Сахара. Озеро Чад полностью исчезло примерно 20 000 лет назад до
+    нашей эры в течение последнего Ледникового периода. Примерно 11 000 лет назад
+    до нашей эры оно появилось вновь. Сегодня уровень его глубины примерно такой же,
+    каким он был в 1000 году нашей эры</p>
+<div class="ozero">
+    <img class="ozero_img" src="https://i.imgur.com/XmxMHfG.jpg" alt='ozero'>
+</div>
+<p>
+    На диаграмме, представленной на Рисунке 2, показаны наскальное искусство в Сахаре
+    (древние рисунки или живопись, найденные на стенах пещер) и изменения в животном
+    мире.
+</p>
+<div class="ozero">
+    <img src="https://i.imgur.com/ZHFLccu.jpg" alt="ozero2">
+
+</div>
+
+
+
+
+
+<h3> Вопрос 1: ОЗЕРО ЧАД  </h3>
+<p>Какова глубина озера Чад на сегодняшний день?</p>
+<input name="vopros1" checked="checked" value="yes" id="value1" type="radio"> Около двух метров. <br>
+<input name="vopros1" value="no" id="value2" type="radio">Около пятнадцати метров. <br>
+<input name="vopros1" value="no" id="value3" type="radio">Около пятидесяти метров. <br>
+<input name="vopros1" value="no" id="value4" type="radio">Оно полностью исчезло. <br>
+<input name="vopros1" value="no" id="value5" type="radio">Информация об этом отсутствует. <br>
+
+<h3> Вопрос 2: ОЗЕРО ЧАД </h3>
+<p>
+    Определите, какой период времени (какой примерно год) соответствует
+начальной точке графика на рисунке 1.
+
+</p>
+<input name="vopros2" checked="checked" value="no" id="value1" type="radio"> 4000 лет до нашей эры <br>
+<input name="vopros2" value="no" id="value2" type="radio"> 8000 лет до нашей эры <br>
+<input name="vopros2" value="yes" id="value3" type="radio"> 11000 лет до нашей эры <br>
+<input name="vopros2" value="no" id="value4" type="radio"> 20000 лет до нашей эры <br>
+
+<h3> Вопрос 3: ОЗЕРО ЧАД </h3>
+<p>Почему автор выбрал именно этот год в качестве начальной точки на
+    графике?</p>
+<input name="vopros3" checked="checked" value="no" id="value1" type="radio"> Потому что в это время озеро Чад полностью высохло. <br>
+<input name="vopros3" value="yes" id="value2" type="radio"> Тогда озеро появилось снова после того, как 9000 лет оно не
+существовало. <br>
+<input name="vopros3" value="no" id="value3" type="radio"> Тогда начали появляться животные <br>
+<input name="vopros3" value="no" id="value4" type="radio"> Потому что это было первое продвижение на графике <br>
+<br>
+<h3> Вопрос 4: ОЗЕРО ЧАД </h3>
+<p>Рисунок 2 основан на предположении о том, что:</p>
+<input name="vopros4" checked="checked" value="yes" id="value1" type="radio">животные, изображенные на наскальных рисунках, обитали в районе озера
+Чад в то время, когда их рисовали. <br>
+<input name="vopros4" value="no" id="value2" type="radio">художники, рисовавшие животных, имели высокую технику рисунка <br>
+<input name="vopros4" value="no" id="value3" type="radio">художники, рисовавшие животных, имели возможность путешествовать на
+дальние расстояния.
+ <br>
+<input name="vopros4" value="no" id="value4" type="radio">не было попытки приручить животных, изображенных на наскальных
+рисунках. <br>
+
+<h3> Вопрос 5: ОЗЕРО ЧАД </h3>
+<p>
+    Для ответа на этот вопрос вам нужно объединить информацию,
+представленную на рисунках 1 и 2.
+Исчезновение носорога, гиппопотама и зубра с наскальных рисунков
+пустыни Сахара произошло:
+</p>
+<input name="vopros5" checked="checked" value="no" id="value1" type="radio"> в начале самого последнего Ледникового периода <br>
+<input name="vopros5" value="no" id="value2" type="radio"> в середине периода, когда глубина озера Чад достигала наивысшего
+уровня.<br>
+<input name="vopros5" value="yes" id="value3" type="radio"> после того, как уровень озера Чад снижался в течение более тысячи лет. <br>
+<input name="vopros5" value="no" id="value4" type="radio"> в начале непрерывного сухого периода. <br>
+<br>
+<input value="Отправить ответы" type="submit">
+</form>
+<script>
+ function check()
+ {
+ var yes=0;
+ var no=0;
+ var otvet="";
+ var choice;
+ for (var v=1; v<=3; v++)
+ {
+ var q = document.forms['quiz'].elements['vopros'+v];
+  for (var i=0; i<q.length; i++)
+  {
+  if (q[i].checked) {
+  choice=q[i].value;
+  }
+  }
+  if (choice=="yes") {yes++;}
+  if (choice=="no") {no++;}
+ }
+ switch (true) {
+ case (yes==0): otvet="Ваша оценка: 2";break;
+ case (yes==1): otvet="Ваша оценка: 3";break;
+ case (yes==2): otvet="Ваша оценка: 4";break;
+ case (yes==3): otvet="Ваша оценка: 5";break;
+ default: otvet="очень плохо";break;
+ }
+ alert(otvet);
+ }
+</script>
